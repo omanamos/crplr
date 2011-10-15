@@ -7,6 +7,8 @@ gem 'rails', '3.0.7'
 
 gem 'mysql'
 
+gem "fb_graph", "~> 2.1.10"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
