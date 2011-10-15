@@ -13,46 +13,43 @@
 ActiveRecord::Schema.define(:version => 20111015181351) do
 
   create_table "automobiles", :force => true do |t|
-    t.integer  "space"
+    t.integer  "space",      :null => false
+    t.integer  "person_id",  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "events", :force => true do |t|
     t.string   "fb_ref"
-    t.string   "name"
-    t.integer  "rsvps_id"
-    t.integer  "paths_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "locations", :force => true do |t|
-    t.integer  "lat"
-    t.integer  "long"
-    t.integer  "mapped_id"
-    t.string   "mapped_type"
+    t.integer  "lat",         :null => false
+    t.integer  "long",        :null => false
+    t.integer  "mappable_id", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "paths", :force => true do |t|
     t.integer  "group_id"
-    t.integer  "location_id"
+    t.integer  "person_id"
+    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "people", :force => true do |t|
     t.string   "fb_ref"
-    t.integer  "rsvps_id"
-    t.integer  "paths_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "rsvps", :force => true do |t|
-    t.integer  "location_id"
+    t.integer  "event_id"
+    t.integer  "person_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

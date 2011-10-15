@@ -3,5 +3,5 @@ class Path < ActiveRecord::Base
   belongs_to :person
   belongs_to :event
 
-  validates_prescence_of :group_id, :location, :person, :event
+  validates_presence_of :group_id, :location, :person, :event
 end

@@ -4,7 +4,7 @@ class CreateLocations < ActiveRecord::Migration
       t.integer :lat, :null => false
       t.integer :long, :null => false
 
-      t.references :rsvp, :null => false
+      t.references :mappable, :null => false
 
       t.timestamps
     end

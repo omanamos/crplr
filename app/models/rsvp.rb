@@ -9,4 +9,6 @@ class Rsvp < ActiveRecord::Base
       # this is the car the person who is driving
       # is using
       has_one :automobile
+
+      validates_presence_of :event, :person, :location
 end
