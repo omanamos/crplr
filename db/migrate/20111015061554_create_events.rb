@@ -2,7 +2,6 @@ class CreateEvents < ActiveRecord::Migration
   def self.up
     create_table :events do |t|
       t.string :fb_ref
-      t.string :name
 
       t.timestamps
     end

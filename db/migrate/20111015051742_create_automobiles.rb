@@ -1,7 +1,9 @@
 class CreateAutomobiles < ActiveRecord::Migration
   def self.up
     create_table :automobiles do |t|
-      t.integer :space
+      t.integer :space, :null => false
+
+      t.references :person, :null => false
 
       t.timestamps
     end
