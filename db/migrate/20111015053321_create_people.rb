@@ -3,6 +3,8 @@ class CreatePeople < ActiveRecord::Migration
     create_table :people do |t|
       t.string :fb_ref
 
+      t.references :automobiles
+
       t.timestamps
     end
   end
